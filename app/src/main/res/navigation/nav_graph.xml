@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.spacelocations.fragments.LoginFragment"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/login_to_register"
+            app:destination="@id/RegisterFragment" />
+        <action
+            android:id="@+id/login_to_map"
+            app:destination="@id/MapFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/RegisterFragment"
+        android:name="com.example.spacelocations.fragments.RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/register_to_login"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MapFragment"
+        android:name="com.example.spacelocations.fragments.MapFragment"
+        tools:layout="@layout/fragment_map">
+
+    </fragment>
+
+</navigation>
