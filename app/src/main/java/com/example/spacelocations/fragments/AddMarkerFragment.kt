@@ -33,8 +33,6 @@ class AddMarkerFragment : Fragment() {
         binding = FragmentAddMarkerBinding.inflate(layoutInflater)
         binding.cameraCaptureButton.setOnClickListener {
 
-
-
             /*val fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
 
             if (ActivityCompat.checkSelfPermission(
