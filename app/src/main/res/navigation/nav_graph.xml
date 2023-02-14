@@ -30,7 +30,19 @@
         android:id="@+id/MapFragment"
         android:name="com.example.spacelocations.fragments.MapFragment"
         tools:layout="@layout/fragment_map">
-
+        <action
+            android:id="@+id/map_to_addmarker"
+            app:destination="@id/AddMarkerFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/AddMarkerFragment"
+        android:name="com.example.spacelocations.fragments.AddMarkerFragment"
+        tools:layout="@layout/fragment_add_marker">
+        <action
+            android:id="@+id/addmarker_to_map"
+            app:destination="@id/MapFragment" />
+    </fragment>
+
 
 </navigation>

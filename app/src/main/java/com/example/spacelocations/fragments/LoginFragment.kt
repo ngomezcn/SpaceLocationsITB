@@ -21,7 +21,6 @@ class LoginFragment : Fragment() {
 
         binding.createAccountButton.setOnClickListener {
             findNavController().navigate(R.id.login_to_register)
-
         }
         return binding.root
     }
