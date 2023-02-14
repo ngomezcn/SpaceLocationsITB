@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/LoginFragment">
+    app:startDestination="@id/MapFragment">
 
     <fragment
         android:id="@+id/LoginFragment"
@@ -33,6 +33,9 @@
         <action
             android:id="@+id/map_to_addmarker"
             app:destination="@id/AddMarkerFragment" />
+        <action
+            android:id="@+id/map_to_recycler"
+            app:destination="@id/ReyclerViewFragment" />
     </fragment>
 
     <fragment
@@ -44,5 +47,10 @@
             app:destination="@id/MapFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/ReyclerViewFragment"
+        android:name="com.example.spacelocations.fragments.RecyclerFragment"
+        tools:layout="@layout/fragment_recycler">
+    </fragment>
 
 </navigation>

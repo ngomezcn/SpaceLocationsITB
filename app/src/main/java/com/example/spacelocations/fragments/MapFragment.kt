@@ -36,6 +36,10 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             findNavController().navigate(R.id.map_to_addmarker)
         }
 
+        binding.reyclerButton.setOnClickListener {
+            findNavController().navigate(R.id.map_to_recycler)
+        }
+
         return binding.root
     }
 
