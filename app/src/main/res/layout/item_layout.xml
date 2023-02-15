@@ -15,7 +15,7 @@
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Miami, 4F"
+        tools:text="- - -"
 
         android:textStyle="bold"
         android:textColor="@color/spacex_white"

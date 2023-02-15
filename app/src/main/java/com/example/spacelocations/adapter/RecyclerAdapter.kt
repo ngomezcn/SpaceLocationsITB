@@ -8,17 +8,11 @@ import android.view.ViewGroup
 import com.example.spacelocations.R
 import com.example.spacelocations.databinding.ItemLayoutBinding
 
-class RecyclerViewAdapter (private var markers: List<MarkerModel>): RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+class RecyclerAdapter (private var markers: List<MarkerModel>): RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
         return ViewHolder(view)
-    }
-
-    fun setList(newMarkers: List<MarkerModel>) {
-        println(markers)
-        markers = newMarkers
-        notifyDataSetChanged()
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -26,7 +20,10 @@ class RecyclerViewAdapter (private var markers: List<MarkerModel>): RecyclerView
 
         val marker = markers[position]
         with(holder){
-            binding.positionTextView.text = marker.position.toString()
+
+
+
+            binding.positionTextView.text = "Lat: ${"%.2f".format(marker.position.latitude)} Long: ${"%.2f".format(marker.position.longitude)}"
             binding.titleTextView.text = marker.title
         }
     }
@@ -37,8 +34,5 @@ class RecyclerViewAdapter (private var markers: List<MarkerModel>): RecyclerView
 
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         val binding = ItemLayoutBinding.bind(view)
-
-
     }
-
 }

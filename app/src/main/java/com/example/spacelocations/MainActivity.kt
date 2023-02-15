@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val bottomNavigationView = binding.bottomNavigation
+        /*val bottomNavigationView = binding.bottomNavigation
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
         val navController = navHostFragment.navController
         bottomNavigationView.setupWithNavController(navController)
@@ -37,11 +37,29 @@ class MainActivity : AppCompatActivity() {
                 bottomNavigationView.visibility = View.VISIBLE
             }
         }
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        setupActionBarWithNavController(navController, appBarConfiguration)*/
+
+
+        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+                item ->
+            when(item.itemId) {
+                R.id.primaryStage -> {
+                    // Respond to navigation item 1 click
+                    true
+                }
+                R.id.secondaryStage -> {
+                    // Respond to navigation item 2 click
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
     override fun onStart() {
         super.onStart()
         navController = findNavController(R.id.fragment_container_view)
     }
+
+
 }

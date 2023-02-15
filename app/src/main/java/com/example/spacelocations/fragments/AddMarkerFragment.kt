@@ -2,6 +2,7 @@ package com.example.spacelocations.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
@@ -33,24 +34,6 @@ class AddMarkerFragment : Fragment() {
         binding = FragmentAddMarkerBinding.inflate(layoutInflater)
         binding.cameraCaptureButton.setOnClickListener {
 
-            /*val fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
-
-            if (ActivityCompat.checkSelfPermission(
-                    requireActivity(),
-                    Manifest.permission.ACCESS_FINE_LOCATION
-                ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                    requireActivity(),
-                    Manifest.permission.ACCESS_COARSE_LOCATION
-                ) != PackageManager.PERMISSION_GRANTED
-            ) {
-
-            }
-
-            fusedLocationClient.lastLocation
-                .addOnSuccessListener { location : Location? ->
-                    // Got last known location. In some rare situations this can be null.
-                }*/
-
             var category : Categories? = null
             when(binding.categoriesSpinner.selectedItem.toString()){
                  "Lift Off" -> category = Categories.LifOff
@@ -74,4 +57,6 @@ class AddMarkerFragment : Fragment() {
 
         return binding.root
     }
+
+
 }

@@ -51,6 +51,9 @@
         android:id="@+id/ReyclerViewFragment"
         android:name="com.example.spacelocations.fragments.RecyclerFragment"
         tools:layout="@layout/fragment_recycler">
+        <action
+            android:id="@+id/recycler_to_map"
+            app:destination="@id/MapFragment" />
     </fragment>
 
 </navigation>

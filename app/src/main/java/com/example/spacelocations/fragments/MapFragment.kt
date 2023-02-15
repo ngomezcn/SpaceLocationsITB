@@ -22,7 +22,8 @@ import com.google.android.gms.maps.model.MarkerOptions
 
 class MapFragment : Fragment(), OnMapReadyCallback {
 
-    //lateinit var map: GoogleMap
+    //lateinit var map: GoogleMap            findNavController().navigate(R.id.map_to_addmarker)
+
     private val viewModel: ViewModel by activityViewModels()
     lateinit var map: GoogleMap
 
